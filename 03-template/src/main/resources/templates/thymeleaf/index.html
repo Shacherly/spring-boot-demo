@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<p th:text="${name}">name</p>-->
+<!--<p th:utext="${name}">name</p>-->
+<P th:text="${hero.getName()}"></P>
+<P  th:text="${hero.camp ? '' : ''}">????</P>
+<input th:text="${hero.camp}" value="camp!!"/>
+
+<div th:object="${hero}">
+    <p>Name: <span th:text="*{getName()}">影魔</span></p>
+    <p>Camp: <span th:text="${hero.camp}" >未知</span></p>
+    <p>Equipment: <span th:text="*{equipment}">蝴蝶</span></p>
+</div>
+
+<a th:href="@{/welcome}">点我呀！！！</a>
+
+<P th:text="#{say}">message</P>
+
+<p th:insert="footer :: copy"></p>
+<div th:replace="footer :: copy"></div>
+<div th:include="footer :: copy"></div>
+</body>
+</html>

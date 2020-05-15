@@ -1,0 +1,7 @@
+logging:
+  file:
+#    \u4E24\u8005\u4E0D\u80FD\u540C\u65F6\u5B58\u5728
+#    path: D:/Project/DUYI_EDU/spring-boot-demo/logs
+   name: log
+  level:
+    root: DEBUG

@@ -1,0 +1,39 @@
+## 不建议的写法
+sf: {name: 影魔, camp: 夜魇}
+
+
+ng:
+  hero-name: 小娜迦
+  campName: ‘’‘’‘
+  position:
+    - 一号位
+    - 二号位
+    - 三号位
+    - 四号位
+    - 五号位
+
+jasypt:
+  encryptor:
+    password: salt
+
+info:
+  username: ENC(F3CoSa8E9CPj0CGI1R+PfQ==)
+  password: ENC(lnbscDwJCU8SODKtPS91O+VZDBpHYsW6)
+#  username: root
+#  password: 123456
+
+spring:
+  profiles:
+    active: prod
+
+---
+spring:
+  profiles: dev
+server:
+  port: 8090
+
+---
+spring:
+  profiles: prod
+server:
+  port: 8091

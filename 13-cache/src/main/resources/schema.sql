@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS guest;
+CREATE TABLE guest(
+    id INT(10) PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(32),
+    role VARCHAR(32)
+);
