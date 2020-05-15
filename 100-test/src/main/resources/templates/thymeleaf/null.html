@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf</title>
+    <script th:src="@{/jquery-3.3.1.min.js}"></script>
+</head>
+<body>
+<span th:text="${nullObj ?: '没有值呀'}"></span><p></p>
+<span th:text="${blankObj == '' ? true : false}"></span><p></p>
+<span th:text="${blankObj == '' ? true : false}"></span><p></p>
+
+<span th:text="${emptyList?.size()}"></span><p></p>
+<span th:text="${emptyList?.get(0) ?: '11index没有'}"></span><p></p>
+
+<span th:text="${map?.get(0) ?: 'get(0)没有'}"></span><p></p>
+<span th:text="${map?.get('a') }">我的</span><p></p>
+
+<span th:text="${emptyMap?.get(1)}">空map</span><p></p>
+
+
+<button id="btn">refresh</button>
+</body>
+<script>
+
+</script>
+</html>
