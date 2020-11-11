@@ -73,7 +73,7 @@ public class GuestServiceImpl implements GuestService {
      * 如果删除数据库的方法执行了，但后面马上报错了，导致整个方法没执行完成，从而导致缓存没被清除掉可不行
      * 可以将beforeInvocation设置为true，这样缓存会先被清除掉，这样才对
      */
-    @CacheEvict(cacheNames = "guests", key = "#id", allEntries = true, beforeInvocation = false)
+    @CacheEvict(/*cacheNames = "guests", */key = "#id", allEntries = false, beforeInvocation = true)
     @Override
     public int delete(int id) {
         if (id == 0) {

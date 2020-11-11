@@ -25,7 +25,11 @@ info:
 spring:
   profiles:
     active: prod
-
+base:
+  attribute: 飞鞋
+  support: 三叉戟
+  magic: BKB
+  hero: PA
 ---
 spring:
   profiles: dev
@@ -36,4 +40,4 @@ server:
 spring:
   profiles: prod
 server:
-  port: 8091
+  port: 8080

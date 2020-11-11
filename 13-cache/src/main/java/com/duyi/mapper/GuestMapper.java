@@ -14,16 +14,16 @@ public interface GuestMapper {
     @Select("SELECT * FROM guest")
     List<Guest> listGuests();
 
-    @Select("select * from guest where id = #{id}")
+    @Select("SELECT * FROM guest WHERE ID = #{id}")
     Guest getGuest(int id);
 
-    @Update("update guest set name = #{name}, role = #{role} where id = #{id}")
+    @Update("UPDATE guest SET NAME = #{name}, ROLE = #{role} WHERE ID = #{id}")
     int update(Guest guest);
 
-    @Delete("delete from guest where id = #{id}")
+    @Delete("DELETE FROM GUEST WHERE ID = #{id}")
     int delete(int id);
 
-    @Delete("delete from guest")
+    @Delete("DELETE FROM GUEST")
     int deleteAll();
 
 }

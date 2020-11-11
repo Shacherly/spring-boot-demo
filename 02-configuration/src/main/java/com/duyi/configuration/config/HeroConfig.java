@@ -1,6 +1,8 @@
 package com.duyi.configuration.config;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
@@ -11,7 +13,7 @@ import org.springframework.context.annotation.PropertySource;
 @ConfigurationProperties(prefix = "base")
 // 声明这是一个配置类，指向对应的配置文件地址
 // @PropertySource("classpath:application.properties")
-@Data
+@Getter @Setter
 public class HeroConfig {
     // 要创建对应的数据类型来接收这些属性，与配置类字段相同。
     private String attribute;

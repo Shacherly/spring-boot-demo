@@ -5,9 +5,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 
 @Data@AllArgsConstructor@NoArgsConstructor
-public class Guest {
+public class Guest implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private Integer id;
     @NotBlank(message = "{guest.name.notblank}")
     private String name;
